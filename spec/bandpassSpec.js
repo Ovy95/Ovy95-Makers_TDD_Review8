@@ -16,6 +16,10 @@ describe("BandPass", function () {
       expect(bandPass.filter([1020])).toEqual([1000])
     })
 
+    it("give a [1020] return the max limit (1000) default",function() {
+      expect(bandPass.filter([30,20])).toEqual([40,40])
+    })
+
   })
 
 })

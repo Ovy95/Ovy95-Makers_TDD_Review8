@@ -2,12 +2,18 @@
 class BandPass {
 
   filter(soundWaveArray){
-    if(soundWaveArray[0] < 40) {
-      soundWaveArray[0] = 40 
+
+    for (let index = 0; index < soundWaveArray.length; index++) {
+        
+
+      if(soundWaveArray[index] < 40) {
+        soundWaveArray[index] = 40 
+      }
+      if(soundWaveArray[index] > 1000) {
+        soundWaveArray[index] = 1000
+      }
     }
-    if(soundWaveArray[0] > 1000) {
-      soundWaveArray[0] = 1000
-    }
+
     return soundWaveArray
 
   }

@@ -32,6 +32,19 @@ describe("BandPass", function () {
     it("Given array plus users min and max values ",function() {
       expect(bandPass.filter([20,50],20 ,50)).toEqual([20,50])
     })
+
+    it("Given array plus users min and max values ",function() {
+      expect(bandPass.filter([20,50],20)).toEqual([20,50])
+    })
+
+    it("check max single value ",function() {
+      expect(bandPass.filter([20,55],undefined,50)).toEqual([40,50])
+    })
+    it("check min value set ",function() {
+      expect(bandPass.filter([20,55],30,undefined)).toEqual([30,55])
+    })
+
+    
   })
 
 
